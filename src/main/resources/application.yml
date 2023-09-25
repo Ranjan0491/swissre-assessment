@@ -1,0 +1,17 @@
+server:
+  port: 8443
+
+spring:
+  application:
+    name: task-ms
+  datasource:
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:demo}?serverTimezone=UTC
+    username: ${DB_USER:root}
+    password: ${DB_PASSWORD:pass}
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
